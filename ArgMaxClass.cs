@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Project
 {
-    static class ArgMaxClass
+    public static class ArgMaxClass
     {
-        static int ArgMax<T>(this IEnumerable<T> en, Func<int,bool> f) where T:IComparable
+        public static int ArgMax<T>(this IEnumerable<T> en, Func<int,bool> f) where T:IComparable
         {
             int i = 0;
             int indexMax = 0;

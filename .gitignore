@@ -16,3 +16,6 @@ Hashcode.sln
 obj/x86/Debug/ConsoleApplication.exe
 obj/x86/Debug/ConsoleApplication.pdb
 obj/x86/Debug/DupaaaaaSzybko.csproj.FileListAbsolute.txt
+.vs/HQ/v15/.suo
+*.user
+*.sln

@@ -18,8 +18,13 @@ namespace Project
             int actId = 0;
             while(true)
             {
-                int newId = everyevery[0]
+                actId = everyevery[actId].ArgMax(i => used[i]);
+                if (actId == -1)
+                    break;
+                used[actId] = true;
+                solution.Add(photos[actId]);
             }
+            return solution;
         }
     }
 }
