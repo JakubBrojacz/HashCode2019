@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Project
 {
-    class Collection
-    {
-        Photo[] photos;
-    }
     class Photo
     {
         public int id;
         public bool horizontal;
-        public List<string> tags;
+        public HashSet<string> tags;
+        public int Score(Photo other)
+        {
+            return 0;
+        }
     }
 }
