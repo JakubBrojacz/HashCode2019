@@ -14,7 +14,7 @@ namespace Project
             var t1 = new System.Diagnostics.Stopwatch();
             var t2 = new System.Diagnostics.Stopwatch();
             //var unused = photos.ToList();
-            var unused1 = photos.Merge();
+            var unused1 = photos.MergeRandom();
             var unused = new LinkedList<Photo>(unused1);
             var solution = new List<Photo>(unused.Count);
             var current_photo = unused.First();
