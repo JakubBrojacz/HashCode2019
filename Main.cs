@@ -9,12 +9,12 @@ namespace Project
     {
         static public void Main()
         {
-            var sol = new RandomSolution1();
+            var sol = new RandomSolution2();
             Func<Photo[], List<Photo>> Solution = new Func<Photo[], List<Photo>>(sol.Task);
             int points = 0;
             Photo[] tab = null;
             List<Photo> s = null;
-            string[] paths = { "a_example.in", "b_small.in", "c_medium.in", "d_big.in" };
+            string[] paths = { "a_example.txt", "b_lovely_landscapes.txt", "c_memorable_moments.txt", "d_pet_pictures.txt","e_shiny_selfies.txt" };
             foreach (var path in paths)
             {
                 Console.WriteLine(path);

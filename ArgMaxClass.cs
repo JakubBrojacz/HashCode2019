@@ -13,10 +13,10 @@ namespace Project
                 return -1;
             int i = 0;
             int indexMax = -1;
-            T max = en.First();
+            T max = default(T);
             foreach (var item in en)
             {
-                if (!f(i))
+                if (f(i))
                     continue;
                 if(item.CompareTo(max) >= 0)
                 {

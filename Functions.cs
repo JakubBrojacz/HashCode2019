@@ -42,6 +42,13 @@ namespace Project
             }
             return tab;
         }
+        static public void PrintList<T>(this List<T> l, System.Func<T, string> f)
+        {
+            string tmp = "";
+            foreach (var o in l)
+                tmp += f(o) + " ";
+            Console.WriteLine(tmp);
+        }
     }
 
 }

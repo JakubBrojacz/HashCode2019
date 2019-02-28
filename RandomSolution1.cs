@@ -9,6 +9,7 @@ namespace Project
     {
         public List<Photo> Task(Photo[] photos)
         {
+            Console.WriteLine(photos.Count(f => !f.horizontal));
             var everyevery = photos.GenPairs();
             int N = photos.Count();
             bool[] used = new bool[N];
@@ -18,7 +19,10 @@ namespace Project
             int actId = 0;
             while(true)
             {
+                
                 actId = everyevery[actId].ArgMax(i => used[i]);
+                Console.WriteLine(actId);
+                Console.WriteLine(used[actId]);
                 if (actId == -1)
                     break;
                 used[actId] = true;
@@ -26,8 +30,6 @@ namespace Project
                 if (!photos[actId].horizontal)
                 {
                     actId = photos.First(f => !f.horizontal).id;
-                    if (actId == -1)
-                        break;
                     used[actId] = true;
                     solution.Add(photos[actId]);
                 }
