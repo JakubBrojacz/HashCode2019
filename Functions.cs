@@ -18,18 +18,22 @@ namespace Project
         }
         public static int[,] GenPairs(this Photo[] list)
         {
-            var tab = new int[list.Length, list.Length];
+            var tab = new int[list.Length][];
+            for(int i = 0; i < list.Length; i++)
+            {
+                tab[i] = new int[list.Length];
+            }
             foreach(var mover in list)
             {
                 foreach(var plox in list)
                 {
                     if(mover.horizontal == false && plox.horizontal == false)
                     {
-                        tab[mover.id, plox.id] = -1;
-                        tab[plox.id, mover.id] = -1;
+                        tab[mover.id][plox.id] = -1;
+                        tab[plox.id][mover.id] = -1;
                         continue;
                     }
-                    tab[mover.id, plox.id] = tab[plox.id, mover.id] = mover.Score(plox);
+                    tab[mover.id][plox.id] = tab[plox.id][mover.id] = mover.Score(plox);
                 }
             }
             return tab;
