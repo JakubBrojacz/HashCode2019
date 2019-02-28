@@ -18,10 +18,11 @@ namespace Project
             //0
 
             int PROB = 100000;
-            var output1 = RandomSol.RunProbab(photos1.ToArray(), PROB);
-            var output
+            var output1 = RandomSol.run2(photos1.ToArray(), PROB,Input.ReadData("b_lovely_landscapes.txt"));
             Console.WriteLine(output1.Score());
+            Output.WriteData("tmp1.txt",output1.ToList());
             Console.ReadLine();
+
 
             //var sol = new RandomSolution2();
             //Func<Photo[], List<Photo>> Solution = new Func<Photo[], List<Photo>>(sol.Task);

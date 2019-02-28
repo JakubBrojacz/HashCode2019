@@ -81,13 +81,8 @@ namespace Project
             return res;
 
         }
-    }
 
-namespace Project
-    {
-        public static class RandomSol2
-        {
-            public static Photo[] run2(Photo[] input, int N, Photo[] source)
+        public static Photo[] run2(Photo[] input, int N, Photo[] source)
             {
                 Photo[] res = input;
                 Random sh = new Random();
@@ -200,6 +195,10 @@ namespace Project
                 return res;
 
             }
+
+        public static class RandomSol2
+        {
+            
             public static Photo[] RunProbab2(Photo[] input, int N)
             {
                 Photo[] res = input.Merge().ToArray();
