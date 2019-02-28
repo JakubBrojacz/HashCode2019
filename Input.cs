@@ -39,6 +39,28 @@ namespace Project
             }
             return _return;
         }
+        public static List<Photo> ReadDataOutput(string pathInput, string pathOutput)
+        {
+            List<Photo> _return = new List<Photo>();
+            Photo[] dupa = ReadData(pathInput);
+            var lines = File.ReadLines(pathOutput);
+            lines = lines.Skip(1);
+            foreach (var line in lines)
+            {
+                string[] v = line.Split(' ');
+                if(v.Length == 1)
+                {
+                    _return.Add(Array.Find(dupa, (x) => x.id == int.Parse(v[0])));
+                }
+                else
+                {
+                    _return.Add(Array.Find(dupa, (x) => x.id == int.Parse(v[0])));
+                    _return.Add(Array.Find(dupa, (x) => x.id == int.Parse(v[1])));
+                }
+            }
+            _return = (_return.ToArray().Merge());
+            return _return;
+        }
     }
 
     public static class Output
