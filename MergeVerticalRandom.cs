@@ -69,8 +69,9 @@ namespace Project
                 }
                 verticals[i2].id2 = verticals[i1].id;
                 newPhotos.Add(verticals[i2]);
+                Photo dupa = verticals[i2];
                 verticals.Remove(verticals[i1]);
-                verticals.Remove(verticals[i2]);
+                verticals.Remove(dupa);
             }
             return newPhotos;
         }
