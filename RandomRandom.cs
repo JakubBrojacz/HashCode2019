@@ -12,7 +12,7 @@ namespace Project
             Photo[] res = input.Merge().ToArray();
             Random sh = new Random();
             //Array.Sort(res, ((prop1, prop2) => sh.Next() % 3 - 1));
-            for (int i=0;i<9999;i++)
+            for (int i=0;i<N;i++)
             {
                 int a = sh.Next(1,res.Length-2);
                 int b = sh.Next(1,res.Length-2);
@@ -34,7 +34,7 @@ namespace Project
             return res;
 
         }
-        public Photo[] RunProbab(Photo[] input)
+        public static Photo[] RunProbab(Photo[] input)
         {
             Photo[] res = input.Merge().ToArray();
             Random sh = new Random();
