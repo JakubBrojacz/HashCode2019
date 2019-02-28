@@ -55,7 +55,7 @@ namespace Project
                 else
                 {
                     _return.Add(Array.Find(dupa, (x) => x.id == int.Parse(v[0])));
-                    _return.Add(Array.Find(dupa, (x) => x.id == int.Parse(v[1])));
+                    _return.Add(Array.Find(dupa, (x) => x.id2 == int.Parse(v[1])));
                 }
             }
             _return = (_return.ToArray().Merge());
