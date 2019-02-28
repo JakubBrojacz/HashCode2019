@@ -13,7 +13,7 @@ namespace Project
             var tab = list.ToArray();
             for(int iTab = 0; iTab < tab.Length-1; iTab++)
             {
-                result += Score(tab[iTab], tab[iTab + 1]);
+                result += tab[iTab].Score(tab[iTab + 1]);
             }
             return result;
         }
