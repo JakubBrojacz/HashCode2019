@@ -1,0 +1,2 @@
+C:\Users\Karol\Desktop\plis\HashCode2019\obj\x86\Debug\Lubie.csprojAssemblyReference.cache
+C:\Users\Karol\Desktop\plis\HashCode2019\obj\x86\Debug\Lubie.csproj.CoreCompileInputs.cache
