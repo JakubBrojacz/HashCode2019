@@ -7,7 +7,7 @@ namespace Project
 {
     public static class MergeVerticalRandom
     {
-        public static void Merge(this Photo[] photos)
+        public static List<Photo> Merge(this Photo[] photos)
         {
             int wasVertical = -1;
             List<Photo> newPhotos = new List<Photo>();
@@ -38,13 +38,8 @@ namespace Project
             }
             if (wasVertical != -1)
                 throw new Exception("Nieparzysta liczba wertykalnych");
-            photos = new Photo[newPhotos.Count];
-            int j = 0;
-            foreach (var item in newPhotos)
-            {
-                photos[j] = item;
-                j++;
-            }
+            return newPhotos;
+
         }
     }
 }
