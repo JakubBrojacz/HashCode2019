@@ -32,7 +32,7 @@ namespace Project
                 int it = 0;
                 foreach (var ph in unused)
                 {
-                    if (it > 100)
+                    if (it > 10)
                         break;
                     int tmp = ph.Score(current_photo);
                     if (tmp > sc)
@@ -59,7 +59,7 @@ namespace Project
             Console.WriteLine(t2.ElapsedTicks);
             //solution.PrintList(p => p.id.ToString());
             if (photos.Count() > 1000)
-                return RandomSol.run(solution.ToArray(), 100000).ToList();
+                return RandomSol.RunProbab(solution.ToArray(), 100000).ToList();
             return solution;
         }
     }
