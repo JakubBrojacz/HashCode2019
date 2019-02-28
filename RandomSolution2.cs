@@ -32,7 +32,7 @@ namespace Project
                 int it = 0;
                 foreach (var ph in unused)
                 {
-                    if (it > 300)
+                    if (it > 1000)
                         break;
                     int tmp = ph.Score(current_photo);
                     if (tmp > sc)
