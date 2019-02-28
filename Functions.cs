@@ -5,9 +5,9 @@ using System.Text;
 
 namespace HAShCoooDe
 {
-    class Functions
+    static class Functions
     {
-        public int Score(List<Photo> list)
+        public static int Score(this List<Photo> list)
         {
             int result = 0;
             var tab = list.ToArray();
