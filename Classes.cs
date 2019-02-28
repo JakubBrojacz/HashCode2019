@@ -13,7 +13,7 @@ namespace Project
         public HashSet<string> tags;
         public int Score(Photo other)
         {
-            return 0;
+            return Math.Min(tags.Intersect(other.tags).Count(), Math.Min(tags.Except(other.tags).Count(), other.tags.Except(tags).Count()));
         }
     }
 }
