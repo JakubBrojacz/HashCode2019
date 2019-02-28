@@ -16,15 +16,9 @@ namespace Project
             }
             return result;
         }
-        public static int Score(this List[] list)
+        public static int Score(this List<Photo> list)
         {
-            var tab = list.ToArray();
-            int result = 0;
-            for(int i = 0; i < tab.Length-1; i++)
-            {
-                result += tab[i].Score(tab[i+1]);
-            }
-            return result;
+            return Score(list.ToArray());
         }
         public static int[][] GenPairs(this Photo[] list)
         {
