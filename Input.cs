@@ -42,13 +42,20 @@ namespace Project
 
     public static class Output
     {
-        public static void WriteData(string path, int tutajCos)
+        public static void WriteData(string path, Photo[] photos)
         {
             using (System.IO.StreamWriter file =
             new System.IO.StreamWriter(path))
             {
-                file.WriteLine("");
+                file.WriteLine(photos.Length);
+                for (int i = 0; i < photos.Length; i++)
+                {
 
+                    if (photos[i].id2 != -1)
+                        file.WriteLine(photos[i].id + " " + photos[i].id2);
+                    else
+                        file.WriteLine(photos[i].id);
+                }
             }
         }
     }
