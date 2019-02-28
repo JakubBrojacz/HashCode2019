@@ -50,10 +50,10 @@ namespace Project
                 file.WriteLine(photos.Count);
                 foreach (var photo in photos)
                 {
-                    //if (photos[i].id2 != -1)
-                    //    file.WriteLine(photo.id + " " + photo.id2);
-                    //else
-                    //    file.WriteLine(photo.id);
+                    if (photo.id2 != -1)
+                        file.WriteLine(photo.id + " " + photo.id2);
+                    else
+                        file.WriteLine(photo.id);
                 }
             }
         }
