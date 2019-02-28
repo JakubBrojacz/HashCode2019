@@ -39,16 +39,13 @@ namespace Project
 
     public static class Output
     {
-        public static void WriteData(string path, List<Slice> list)
+        public static void WriteData(string path, int tutajCos)
         {
             using (System.IO.StreamWriter file =
             new System.IO.StreamWriter(path))
             {
-                file.WriteLine(list.Count);
-                foreach (var v1 in list)
-                {
-                    file.WriteLine(v1.sx + " " + v1.sy + " " + (v1.ex - 1) + " " + (v1.ey - 1));
-                }
+                file.WriteLine("");
+
             }
         }
     }
