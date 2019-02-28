@@ -55,7 +55,7 @@ namespace Project
             Console.WriteLine(tmp);
         }
 
-        private static Random rng = new Random();
+        private static Random rng = new Random(0);
 
         public static void Shuffle<T>(this IList<T> list)
         {

@@ -14,7 +14,7 @@ namespace Project
             var t1 = new System.Diagnostics.Stopwatch();
             var t2 = new System.Diagnostics.Stopwatch();
             //var unused = photos.ToList();
-            var unused1 = photos.MergeRandom();
+            var unused1 = photos.Merge();
             var unused = new LinkedList<Photo>(unused1);
             var solution = new List<Photo>(unused.Count);
             var current_photo = unused.First();
@@ -32,7 +32,7 @@ namespace Project
                 int it = 0;
                 foreach (var ph in unused)
                 {
-                    if (it > 10)
+                    if (it > 300)
                         break;
                     int tmp = ph.Score(current_photo);
                     if (tmp > sc)
@@ -58,8 +58,8 @@ namespace Project
             Console.WriteLine(t1.ElapsedTicks);
             Console.WriteLine(t2.ElapsedTicks);
             //solution.PrintList(p => p.id.ToString());
-            if (photos.Count() > 1000)
-                return RandomSol.RunProbab(solution.ToArray(), 100000).ToList();
+            //if (photos.Count() > 1000)
+            //    return RandomSol.RunProbab(solution.ToArray(), 500000).ToList();
             return solution;
         }
     }

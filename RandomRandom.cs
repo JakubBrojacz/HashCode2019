@@ -66,7 +66,7 @@ namespace Project
                 else
                 {
                     double r = sh.Next(1000) / 1000;
-                    if (Math.Exp(coef) > r)
+                    if (Math.Exp(coef*7) < r)
                     {
                         Photo tmp = res[a];
                         res[a] = res[b];
