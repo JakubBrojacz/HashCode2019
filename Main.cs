@@ -19,7 +19,7 @@ namespace Project
                 Console.WriteLine(path);
                 tab = Input.ReadData(path);
                 s = Solution(tab);
-                points = CalcPoints(s);
+                points = Score(s);
                 //Output.WriteData("a_example.out", s);
                 Console.WriteLine($"Points: {points}");
                 Console.WriteLine("________");
