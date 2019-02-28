@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Project
 {
-    class RandomSol
+    public static class RandomSol
     {
-        public Photo[] run(Photo[] input)
+        public static Photo[] run(Photo[] input, int N)
         {
             Photo[] res = input.Merge().ToArray();
             Random sh = new Random();
