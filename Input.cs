@@ -22,6 +22,7 @@ namespace Project
             {
                 Photo newPhoto = new Photo();
                 newPhoto.id = id;
+                newPhoto.id2 = -1;
                 
                 string[] vv = line.Split(' ');
                 if (vv[0][0] == 'H')
