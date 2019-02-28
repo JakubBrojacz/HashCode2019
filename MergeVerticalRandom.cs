@@ -7,7 +7,7 @@ namespace Project
 {
     public static class MergeVerticalRandom
     {
-        public static void Merge(Photo[] photos)
+        public static void Merge(this Photo[] photos)
         {
             int wasVertical = -1;
             List<Photo> newPhotos = new List<Photo>();
