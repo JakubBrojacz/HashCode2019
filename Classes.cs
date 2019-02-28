@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project
 {
-    class Photo
+    public class Photo
     {
         public int id;
         public bool horizontal;
