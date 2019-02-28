@@ -42,19 +42,18 @@ namespace Project
 
     public static class Output
     {
-        public static void WriteData(string path, Photo[] photos)
+        public static void WriteData(string path, List<Photo> photos)
         {
             using (System.IO.StreamWriter file =
             new System.IO.StreamWriter(path))
             {
-                file.WriteLine(photos.Length);
-                for (int i = 0; i < photos.Length; i++)
+                file.WriteLine(photos.Count);
+                foreach (var photo in photos)
                 {
-
                     if (photos[i].id2 != -1)
-                        file.WriteLine(photos[i].id + " " + photos[i].id2);
+                        file.WriteLine(photo.id + " " + photo.id2);
                     else
-                        file.WriteLine(photos[i].id);
+                        file.WriteLine(photo.id);
                 }
             }
         }
