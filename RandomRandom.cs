@@ -49,19 +49,24 @@ namespace Project
                 B1 = Functions.Score(res[b], res[b - 1]) + Functions.Score(res[b], res[b + 1]);
                 B2 = Functions.Score(res[a], res[b - 1]) + Functions.Score(res[a], res[b + 1]);
 
-                int tmpFF = sh.Next(100);
-                if (A1 + B1 < A2 + B2)
+                int prevSum = A1 + B1;
+                int nextSum = A2 + B2;
+                double coef;
+                if (prevSum != 0)
+                    coef = (nextSum - prevSum) / prevSum;
+                else
+                    coef = 1;
+                
+                if (coef > 0)
                 {
-                    if (tmpFF > 3)
-                    {
                         Photo tmp = res[a];
                         res[a] = res[b];
                         res[b] = tmp;
-                    }
                 }
                 else
                 {
-                    if(tmpFF <= 3)
+                    double r = sh.Next(1000) / 1000;
+                    if (Math.Exp(coef) > r)
                     {
                         Photo tmp = res[a];
                         res[a] = res[b];
