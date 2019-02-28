@@ -10,7 +10,7 @@ namespace Project
         static public void Main()
         {
             string path = "";
-            List<Photo> collection = Input.ReadData(path);
+            Photo[] collection = Input.ReadData(path);
             return;
         }
     }

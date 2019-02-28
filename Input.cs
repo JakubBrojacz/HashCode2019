@@ -8,20 +8,21 @@ namespace Project
 {
     public static class Input
     {
-        public static List<Photo> ReadData(string path)
+        public static Photo[] ReadData(string path)
         {
-            List<Photo> _return = new List<Photo>();
+            
             var lines = File.ReadLines(path);
             string firstLine = lines.First();
             string[] v = firstLine.Split(' ');
             int N = int.Parse(v[0]);
+            Photo[] _return = new Photo[N];
             lines = lines.Skip(1);
             int id = 0;
             foreach (string line in lines)
             {
                 Photo newPhoto = new Photo();
                 newPhoto.id = id;
-                id++;
+                
                 string[] vv = line.Split(' ');
                 if (vv[0][0] == 'H')
                     newPhoto.horizontal = true;
@@ -32,6 +33,8 @@ namespace Project
                 {
                     newPhoto.tags.Add(vv[i]);
                 }
+                _return[id] = newPhoto;
+                id++;
             }
             return _return;
         }
