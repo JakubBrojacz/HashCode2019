@@ -20,6 +20,11 @@ namespace Project
         {
             return Score(list.ToArray());
         }
+        public static int Score(Photo a,Photo b)
+        {
+            Photo[] tab = { a, b };
+            return tab.Score();
+        }
         public static int[][] GenPairs(this Photo[] list)
         {
             var tab = new int[list.Length][];
