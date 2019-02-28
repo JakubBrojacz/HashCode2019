@@ -14,6 +14,7 @@ namespace Project
             int points = 0;
             Photo[] tab = null;
             List<Photo> s = null;
+            int i = 0;
             string[] paths = { "a_example.txt", "b_lovely_landscapes.txt", "c_memorable_moments.txt", "d_pet_pictures.txt","e_shiny_selfies.txt" };
             foreach (var path in paths)
             {
@@ -21,9 +22,10 @@ namespace Project
                 tab = Input.ReadData(path);
                 s = Solution(tab);
                 points = s.Score();
-                //Output.WriteData("a_example.out", s);
+                Output.WriteData(i+"output.txt", s);
                 Console.WriteLine($"Points: {points}");
                 Console.WriteLine("________");
+                i++;
             }
             return;
         }
