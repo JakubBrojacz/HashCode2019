@@ -8,7 +8,7 @@ namespace Project
 {
     public class Photo
     {
-        public int id;
+        public int id, id2=-1;
         public bool horizontal;
         public HashSet<string> tags;
         public int Score(Photo other)
