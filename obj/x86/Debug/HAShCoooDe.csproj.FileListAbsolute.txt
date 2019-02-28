@@ -1,0 +1,6 @@
+C:\Users\Potatoe\Documents\GitHub\HashCode2019\obj\x86\Debug\HAShCoooDe.csprojAssemblyReference.cache
+C:\Users\Potatoe\Documents\GitHub\HashCode2019\obj\x86\Debug\HAShCoooDe.csproj.CoreCompileInputs.cache
+C:\Users\Potatoe\Documents\GitHub\HashCode2019\bin\Debug\ConsoleApplication.exe
+C:\Users\Potatoe\Documents\GitHub\HashCode2019\bin\Debug\ConsoleApplication.pdb
+C:\Users\Potatoe\Documents\GitHub\HashCode2019\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\Potatoe\Documents\GitHub\HashCode2019\obj\x86\Debug\ConsoleApplication.pdb

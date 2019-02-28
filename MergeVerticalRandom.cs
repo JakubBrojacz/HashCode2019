@@ -13,7 +13,7 @@ namespace Project
             List<Photo> newPhotos = new List<Photo>();
             for (int i = 0; i < photos.Length; i++)
             {
-                if(!photos[i].horizontal)
+                if(!photos[i].horizontal && photos[i].id2 == -2)
                 {
                     if (wasVertical == -1)
                     {

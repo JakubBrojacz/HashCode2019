@@ -50,12 +50,12 @@ namespace Project
                 string[] v = line.Split(' ');
                 if(v.Length == 1)
                 {
-                    _return.Add(Array.Find(dupa, (x) => x.id == int.Parse(v[0])));
+                    _return.Add(dupa[int.Parse(v[0])]);
                 }
                 else
                 {
-                    _return.Add(Array.Find(dupa, (x) => x.id == int.Parse(v[0])));
-                    _return.Add(Array.Find(dupa, (x) => x.id2 == int.Parse(v[1])));
+                    _return.Add(dupa[int.Parse(v[0])]);
+                    _return.Add(dupa[int.Parse(v[1])]);
                 }
             }
             _return = (_return.ToArray().Merge());
