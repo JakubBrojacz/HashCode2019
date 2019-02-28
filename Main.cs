@@ -9,7 +9,8 @@ namespace Project
     {
         static public void Main()
         {
-            Func<Photo[], List<Photo>> Solution = new Func<Photo[], List<Photo>>();
+            var sol = new RandomSolution1();
+            Func<Photo[], List<Photo>> Solution = new Func<Photo[], List<Photo>>(sol.Task);
             int points = 0;
             Photo[] tab = null;
             List<Photo> s = null;
@@ -19,7 +20,7 @@ namespace Project
                 Console.WriteLine(path);
                 tab = Input.ReadData(path);
                 s = Solution(tab);
-                points = Score(s);
+                points = s.Score();
                 //Output.WriteData("a_example.out", s);
                 Console.WriteLine($"Points: {points}");
                 Console.WriteLine("________");

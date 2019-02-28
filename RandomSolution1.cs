@@ -23,6 +23,14 @@ namespace Project
                     break;
                 used[actId] = true;
                 solution.Add(photos[actId]);
+                if (!photos[actId].horizontal)
+                {
+                    actId = photos.First(f => !f.horizontal).id;
+                    if (actId == -1)
+                        break;
+                    used[actId] = true;
+                    solution.Add(photos[actId]);
+                }
             }
             return solution;
         }
