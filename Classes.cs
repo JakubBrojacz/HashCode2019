@@ -13,7 +13,8 @@ namespace Project
         public HashSet<string> tags;
         public int Score(Photo other)
         {
-            return Math.Min(tags.Intersect(other.tags).Count(), Math.Min(tags.Except(other.tags).Count(), other.tags.Except(tags).Count()));
+            int intersectCount = tags.Intersect(other.tags).Count();
+            return Math.Min(intersectCount, Math.Min(tags.Count - intersectCount, other.tags.Count - intersectCount));
         }
 
         public static Photo Concatenate(Photo a,Photo b)
